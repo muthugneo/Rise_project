@@ -12,16 +12,16 @@ class AppConfig {
   static const bool HTTPS = false;
 
   //configure this
-  static const DOMAIN_PATH = "cinemafactory.co.in/demo"; //localhost
-  // static const DOMAIN_PATH = "admin.risegfa.com"; //localhost
+  // static const DOMAIN_PATH = "cinemafactory.co.in/demo"; //localhost
+  static const DOMAIN_PATH = "admin.risegfa.com"; //localhost
   //static const DOMAIN_PATH = "demo.activeitzone.com/ecommerce_flutter_demo"; //inside a folder
   //static const DOMAIN_PATH = "smileturbans.com"; // directly inside the public folder
 
   //do not configure these below
   static const String API_ENDPATH = "api/v2";
   static const String PUBLIC_FOLDER = "public";
-  static const String PROTOCOL = "https://";
-  // static const String PROTOCOL = HTTPS ? "https://" : "http://";
+  // static const String PROTOCOL = "https://";
+  static const String PROTOCOL = HTTPS ? "https://" : "http://";
   static const String RAW_BASE_URL = "$PROTOCOL$DOMAIN_PATH";
   static const String BASE_URL = "$RAW_BASE_URL/$API_ENDPATH";
 

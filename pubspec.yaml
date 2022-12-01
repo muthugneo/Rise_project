@@ -102,6 +102,7 @@ dependencies:
   http: ^0.13.5
   image_picker: ^0.8.5+3
   overlay_support: ^2.0.1
+  share_plus: ^6.3.0
   # carousel_slider: ^4.0.0
   # cached_network_image: ^3.1.0
   # timeline_tile: ^2.0.0

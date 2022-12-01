@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -6,6 +5,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:toast/toast.dart';
 
 import '../addon_config.dart';
@@ -383,7 +383,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                                     Radius.circular(8.0),
                                   ),
                                 ),
-                                contentPadding: const EdgeInsets.only(left: 8.0)),
+                                contentPadding:
+                                    const EdgeInsets.only(left: 8.0)),
                           ),
                         ),
                       ),
@@ -1046,7 +1047,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(2.0),
                     border: Border.all(
-                        color: const Color.fromRGBO(112, 112, 112, .3), width: 0.5),
+                        color: const Color.fromRGBO(112, 112, 112, .3),
+                        width: 0.5),
                     //shape: BoxShape.rectangle,
                   ),
                   child: FadeInImage.assetNetwork(
@@ -1101,7 +1103,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
               ),
             ),
-            const Icon(Icons.message, size: 16, color: Color.fromRGBO(7, 101, 136, 1))
+            const Icon(Icons.message,
+                size: 16, color: Color.fromRGBO(7, 101, 136, 1))
           ],
         ))
       ],
@@ -1149,8 +1152,8 @@ class _ProductDetailsState extends State<ProductDetails> {
           height: 36,
           width: 120,
           decoration: BoxDecoration(
-              border:
-                  Border.all(color: const Color.fromRGBO(222, 222, 222, 1), width: 1),
+              border: Border.all(
+                  color: const Color.fromRGBO(222, 222, 222, 1), width: 1),
               borderRadius: BorderRadius.circular(36.0),
               color: Colors.white),
           child: Row(
@@ -1530,7 +1533,10 @@ class _ProductDetailsState extends State<ProductDetails> {
           padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
           child: IconButton(
             icon: Icon(Icons.share_outlined, color: MyTheme.white),
-            onPressed: () {},
+            onPressed: () {
+              Share.share(
+                  "Take a look at this ${_productDetails.name} on RISE GFA https://dl.flipkart.com/s/nkRmSwNNNN");
+            },
           ),
         ),
       ],
@@ -1605,8 +1611,9 @@ class _ProductDetailsState extends State<ProductDetails> {
           itemCount: 5,
           ratingWidget: RatingWidget(
             full: const Icon(FontAwesome.star, color: Colors.amber),
-            empty:
-                const Icon(FontAwesome.star, color: Color.fromRGBO(224, 224, 225, 1)), half: const SizedBox(),
+            empty: const Icon(FontAwesome.star,
+                color: Color.fromRGBO(224, 224, 225, 1)),
+            half: const SizedBox(),
           ),
           itemPadding: const EdgeInsets.only(right: 1.0),
           onRatingUpdate: (rating) {
@@ -1891,7 +1898,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           int index = _carouselImageList.indexOf(url);
                           return Flexible(
                             child: GestureDetector(
-                              onTap: () async{
+                              onTap: () async {
                                 //print(index);
                                 return _imageCarouselController.animateToPage(
                                     index,
@@ -1907,7 +1914,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   border: Border.all(
                                       color: _currentImage == index
                                           ? MyTheme.accent_color
-                                          : const Color.fromRGBO(112, 112, 112, .3),
+                                          : const Color.fromRGBO(
+                                              112, 112, 112, .3),
                                       width: _currentImage == index ? 2 : 1),
                                   //shape: BoxShape.rectangle,
                                 ),
