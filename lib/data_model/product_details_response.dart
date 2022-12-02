@@ -58,6 +58,7 @@ class DetailedProduct {
     this.rating_count,
     this.earn_point,
     this.description,
+    this.sharelink,
   });
 
   int? id;
@@ -84,6 +85,7 @@ class DetailedProduct {
   int? rating_count;
   int? earn_point;
   String? description;
+  String? sharelink;
 
   factory DetailedProduct.fromJson(Map<String, dynamic> json) => DetailedProduct(
     id: json["id"],
@@ -110,6 +112,7 @@ class DetailedProduct {
     rating_count: json["rating_count"],
     earn_point: json["earn_point"].toInt(),
     description: json["description"] == null || json["description"] == "" ? "No Description is available" : json['description'],
+    sharelink: json["sharelink"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -137,6 +140,7 @@ class DetailedProduct {
     "rating_count": rating_count,
     "earn_point": earn_point,
     "description": description,
+    "sharelink": sharelink,
   };
 }
 

@@ -1535,7 +1535,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             icon: Icon(Icons.share_outlined, color: MyTheme.white),
             onPressed: () {
               Share.share(
-                  "Take a look at this ${_productDetails.name} on RISE GFA https://dl.flipkart.com/s/nkRmSwNNNN");
+                  "Take a look at this ${_productDetails.name} on RISE GFA ${_productDetails.sharelink}. Download RISE GFA app at https://play.google.com/store/apps/details?id=com.neophron.gfa");
             },
           ),
         ),
